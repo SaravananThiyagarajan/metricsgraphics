@@ -51,6 +51,10 @@ HTMLWidgets.widget({
     console.log(wide) ;
 
     var xax_format = mjs_plain;
+    
+    if (params.xax_format == "plain_years") {
+      xax_format = mjs_plain_years ;
+    }
 
     if (params.xax_format == "date") {
 
@@ -240,6 +244,11 @@ mjs_comma = function(d) {
 mjs_date = function(d) {
   var df = d3.time.format('%b %d');
   return df(d);
+};
+
+mjs_plain_years = function(d) {
+  var str = "Year"
+  return(str.concat(d.toString()));
 };
 
 mjs_plain = function(d) {

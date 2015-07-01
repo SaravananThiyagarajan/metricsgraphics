@@ -452,8 +452,8 @@ mjs_axis_x <- function(mjs,
                        show_secondary_x_label=NULL,
                        rug=FALSE) {
 
-  if (!xax_format %in% c("plain", "comma", "date")) {
-    stop("'xax_format' must be either 'plain', 'comma' or 'date'")
+  if (!xax_format %in% c("plain", "comma", "date", "plain_years)) {
+    stop("'xax_format' must be either 'plain', 'plain_years', 'comma' or 'date'")
   }
 
   mjs$x$x_axis <- show
